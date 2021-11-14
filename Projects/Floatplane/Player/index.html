@@ -2,11 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Floatplane Player</title>
 </head>
+
 <body>
-    <div class="collapsible center vertical-center">Settings</div>
+    <div class="collapsible center vertical-center"><span class="iconify" data-icon="mdi:cog-outline"></span></div>
     <div class="content center">
         <a>Attachment ID: <input type="text" id="attachmentID"></a>
         <br>
@@ -20,15 +22,12 @@
     <div class="center"><video controls id="video" class="video-mask center"></video></div>
 </body>
 
-
-
 <script>
     function load()
     {
         document.querySelector("video").src = "https://edge01-na.floatplane.com/Videos/" + document.getElementById("attachmentID").value + "/" + document.getElementById("resolution").value + ".mp4";
     }
 </script>
-
 
 <script>
     var coll = document.getElementsByClassName("collapsible");
