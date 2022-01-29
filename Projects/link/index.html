@@ -1,0 +1,38 @@
+<!-- 
+    Nothing to see here this page is just a redirect 
+    Put the base64 encrypted url after the question mark
+
+    Usage:
+    MichalHrbek.github.io/Projects/link?base64url
+
+    Example:
+    MichalHrbek.github.io/Projects/link?TWljaGFsSHJiZWsuZ2l0aHViLmlv
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+
+</body>
+<script>
+    url = location.href;
+    parameter = url.substring(url.indexOf("?")+1);
+
+    if(parameter != "")
+    {
+        decrypted = atob(parameter);
+        console.log(decrypted);
+        if(!decrypted.includes("://"))
+        {
+            decrypted = "https://" + decrypted;
+        }
+        window.location.replace(decrypted); 
+    }
+</script>
+</html>
