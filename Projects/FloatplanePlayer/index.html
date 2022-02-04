@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="../../css/FloatplanePlayer.css">
+    <title>Floatplane Player</title>
+</head>
+
+<body>
+    <div class="collapsible center vertical-center"><span class="iconify" data-icon="mdi:cog-outline"></span></div>
+    <div class="content center">
+        <a>Attachment ID: <input type="text" id="attachmentID"></a>
+        <br>
+        <a>Resoultion: <input type="text" id="resolution"></a>
+        <br>
+        <a>Likes and Dislikes: <input type="checkbox" id="likesEnabled" checked></a>
+        <br>
+        <button onclick="load()">Load</button>
+    </div>
+    <br>
+    <br>
+    
+    <div class="center">
+      <video controls id="video" class="video-mask center"></video>
+      <br>
+      <br>
+      <div id="likes">
+        <h4 id="likeCounter" style="display: inline; vertical-align: 50%;">50</h4> <span class="iconify" data-icon="mdi:thumb-up-outline" style="font-size: 200%;"></span>
+        <span class="iconify" data-icon="mdi:thumb-down-outline" style="font-size: 200%;"></span> <h4 id="dislikeCounter" style="display: inline; vertical-align: 50%;">50</h4>
+      </div>
+    </div>
+</body>
+
+<script>
+  function load()
+  {
+    var likeCount = parseInt(url.searchParams.get("likes"));
+    var dislikeCount = parseInt(url.searchParams.get("dislikes"));
+    var likesEnabled = document.getElementById("likesEnabled").checked;
+
+    if(likesEnabled)
+    {
+      document.getElementById("dislikeCounter").innerText = dislikeCount;
+      document.getElementById("likeCounter").innerText = likeCount;
+      document.getElementById("likes").style.visibility = "visible";
+    }
+    else{
+      document.getElementById("likes").style.visibility = "hidden";
+    }
+
+    document.querySelector("video").src = `https://edge01-na.floatplane.com/Videos/${document.getElementById("attachmentID").value}/${document.getElementById("resolution").value}.mp4`;
+  }
+</script>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var id = url.searchParams.get("id");
+  document.getElementById("attachmentID").value = id;
+
+  var res = url.searchParams.get("res");
+  document.getElementById("resolution").value = res;
+
+  load();
+</script>
+
+</html>
