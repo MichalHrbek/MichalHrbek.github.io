@@ -14,8 +14,6 @@
         <br>
         <a>Resoultion: <input type="text" id="resolution"></a>
         <br>
-        <a>Likes and Dislikes: <input type="checkbox" id="likesEnabled" checked></a>
-        <br>
         <button onclick="load()">Load</button>
     </div>
     <br>
@@ -25,7 +23,7 @@
       <video controls id="video" class="video-mask center"></video>
       <br>
       <br>
-      <div id="likes">
+      <div id="likes" style="visibility: hidden;">
         <h4 id="likeCounter" style="display: inline; vertical-align: 50%;">50</h4> <span class="iconify" data-icon="mdi:thumb-up-outline" style="font-size: 200%;"></span>
         <span class="iconify" data-icon="mdi:thumb-down-outline" style="font-size: 200%;"></span> <h4 id="dislikeCounter" style="display: inline; vertical-align: 50%;">50</h4>
       </div>
@@ -37,16 +35,12 @@
   {
     var likeCount = parseInt(url.searchParams.get("likes"));
     var dislikeCount = parseInt(url.searchParams.get("dislikes"));
-    var likesEnabled = document.getElementById("likesEnabled").checked;
-
-    if(likesEnabled)
+    
+    if(!isNaN(likeCount))
     {
       document.getElementById("dislikeCounter").innerText = dislikeCount;
       document.getElementById("likeCounter").innerText = likeCount;
       document.getElementById("likes").style.visibility = "visible";
-    }
-    else{
-      document.getElementById("likes").style.visibility = "hidden";
     }
 
     document.querySelector("video").src = `https://edge01-na.floatplane.com/Videos/${document.getElementById("attachmentID").value}/${document.getElementById("resolution").value}.mp4`;
