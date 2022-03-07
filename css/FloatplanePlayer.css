@@ -19,7 +19,7 @@ html{
     background-color: var(--button);
     opacity: 0.8;
     cursor: pointer;
-    padding: 18px;
+    padding: 1%;
     border: none;
     text-align: left;
     outline: none;

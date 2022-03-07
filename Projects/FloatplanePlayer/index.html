@@ -12,8 +12,16 @@
     <div class="content center">
         <a>Attachment ID: <input type="text" id="attachmentID"></a>
         <br>
-        <a>Resoultion: <input type="text" id="resolution"></a>
-        <br>
+        <a>Resoultion: <label for="resolution"></label></a>
+        
+        <select name="resolution" id="resolution">
+          <option value="480">480p</option>
+          <option value="720">720p</option>
+          <option value="1080">1080p</option>
+          <option value="2160">4K</option>
+          <option value="4320">8K</option>
+        </select>
+        
         <button onclick="load()">Load</button>
     </div>
     <br>
