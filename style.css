@@ -43,11 +43,11 @@ a:hover, a:visited, a:link, a:active
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 40%;
-	font-size: 4.5vh;
+	font-size: min(4.5vh, 6vw);
 }
 .panel{
-    width: 30vh;
-    height: 30vh;
+    width: min(30vh, 40vh);
+    height: min(30vh, 40vw);
     border-radius: 5%;
     text-align: center;
     background-color: #A5C882;
