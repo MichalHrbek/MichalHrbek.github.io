@@ -24,8 +24,7 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
 }
 .content {
-    max-width: 500px;
-    margin: auto;
+    border-spacing: 0;
 }
 .centertext{
     text-align: center;
@@ -34,18 +33,21 @@ a:hover, a:visited, a:link, a:active
     text-transform: uppercase;
 }
 .toptext{
-    font-size: 350%;
+    font-size: 4.5vh;
 }
 .bold{
     font-weight: bold;
 }
 .vhc{
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 40%;
-	font-size: 350%;
+	font-size: 4.5vh;
 }
 .panel{
-    width: 400px;
-    height: 400px;
+    width: 30vh;
+    height: 30vh;
     border-radius: 5%;
     text-align: center;
     background-color: #A5C882;
