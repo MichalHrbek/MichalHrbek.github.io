@@ -16,7 +16,12 @@ button {
     font-size: medium;
     border: 0;
     border-radius: 4px;
-    margin: 0px 2px 0px 2px;
+    margin: 1px 2px 1px 2px;
+}
+
+button:hover {
+    border: 1px solid black;
+    margin: 0px 1px 0px 1px;
 }
 
 .module {
