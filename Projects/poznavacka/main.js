@@ -85,7 +85,7 @@ async function main()
 
 async function getImageUrl(flowerName, resolution)
 {
-    const response = await fetch(`http://cs.wikipedia.org/w/api.php?action=query&titles=${flowerName}&prop=pageimages&format=json&origin=*&pithumbsize=${resolution}`)
+    const response = await fetch(`https://cs.wikipedia.org/w/api.php?action=query&titles=${flowerName}&prop=pageimages&format=json&origin=*&pithumbsize=${resolution}`)
     var resJson = await response.json()
     return resJson.query.pages[Object.keys(resJson.query.pages)[0]].thumbnail.source
 }
