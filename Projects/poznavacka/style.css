@@ -1,0 +1,38 @@
+.correct:active {
+    background-color: green;
+}
+
+.incorrect:active {
+    background-color: red;
+}
+
+body {
+    background-color: darkgray;
+}
+
+button {
+    background-color: white;
+    color: black;
+    font-size: medium;
+    border: 0;
+    border-radius: 4px;
+    margin: 0px 2px 0px 2px;
+}
+
+.module {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px 20px 5px 20px;
+}
+
+.textmodule {
+    padding: 10px 15px 10px 15px;
+}
+
+.container {
+    margin: auto;
+    padding: 15px 15px 15px 15px;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 20px;
+}
