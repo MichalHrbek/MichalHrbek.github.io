@@ -1,71 +1,71 @@
 body{
-    font-family: "Roboto", Roboto;
-    background-color: #5CDB95;
-    color: #576490;
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: linear-gradient(
-        to right, 
-        #F7DD72 0%, 
-        #F7DD72 50%, 
-        #5AB1BB 50%, 
-        #5AB1BB 100%
-      );
+	font-family: "Roboto", Roboto;
+	background-color: #5CDB95;
+	color: #576490;
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: linear-gradient(
+		to right, 
+		#F7DD72 0%, 
+		#F7DD72 50%, 
+		#5AB1BB 50%, 
+		#5AB1BB 100%
+		);
 }
+
 a {
-    color: #576490;
-    text-decoration: none;
+	color: #576490;
+	text-decoration: none;
 }
+
 a:hover, a:visited, a:link, a:active
 {
-    color: #576490;
-    text-decoration: none;
+	color: #576490;
+	text-decoration: none;
 }
+
 .content {
-    border-spacing: 0;
+	border-spacing: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
-.centertext{
-    text-align: center;
-}
-.up{
-    text-transform: uppercase;
-}
+
 .toptext{
-    font-size: 4.5vh;
+	font-size: 4.5vh;
+	font-weight: bold;
 }
-.bold{
-    font-weight: bold;
-}
-.vhc{
-    margin: 0;
-    text-align: center;
-    padding-top: 40%;
-	font-size: min(4.5vh, 6vw);
-}
+
 .panel{
-    width: min(30vh, 40vw);
-    height: min(30vh, 40vw);
-    border-radius: 5%;
-    text-align: center;
-    background-color: #A5C882;
-    transform:scale(0.90);
-    transition: all ease-in 0.1s;
+	width: min(30vh, 40vw);
+	height: min(30vh, 40vw);
+	border-radius: 5%;
+	background-color: #A5C882;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: min(2.25vh, 3vw);
+	text-align: center;
 }
-.panel:hover{
-    transform:scale(0.95);
+
+.hoverscale {
+	transform:scale(0.90);
+	transition: all ease-in 0.1s;
 }
-.center {
-    margin-left: auto;
-    margin-right: auto;
+
+.hoverscale:hover{
+	transform:scale(0.95);
 }
+
 .split {
-    height: 15%;
-    width: 50%;
-    position: fixed;
-    padding-top: 25px;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
+	height: 15%;
+	width: 50%;
+	position: fixed;
+	padding-top: 1%;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
 }
