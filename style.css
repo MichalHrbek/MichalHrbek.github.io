@@ -1,28 +1,57 @@
+:root {
+	--primary-color1: #F7DD72;
+	--primary-color2: #5AB1BB;
+	--secondary-color: #A5C882;
+	--secondary-text-color: #576490;
+}  
+
 body{
 	font-family: "Roboto", Roboto;
-	background-color: #5CDB95;
-	color: #576490;
 	height: 100%;
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background: linear-gradient(
 		to right, 
-		#F7DD72 0%, 
-		#F7DD72 50%, 
-		#5AB1BB 50%, 
-		#5AB1BB 100%
-		);
+		var(--primary-color1) 0%, 
+		var(--primary-color1) 50%, 
+		var(--primary-color2) 50%, 
+		var(--primary-color2) 100%
+	);
+}
+
+header {
+	margin-top: 1.5vh;
+	font-size: 5vh;
+	font-weight: bold;
+}
+
+header > table {
+	table-layout: fixed;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.t1 {
+	color: var(--primary-color2);
+	text-align: right;
+	padding-right: 1vh;
+}
+
+.t2 {
+	color: var(--primary-color1);
+	text-align: left;
+	padding-left: 1vh;
 }
 
 a {
-	color: #576490;
+	color: var(--secondary-text-color);
 	text-decoration: none;
 }
 
 a:hover, a:visited, a:link, a:active
 {
-	color: #576490;
+	color: var(--secondary-text-color);
 	text-decoration: none;
 }
 
@@ -30,25 +59,22 @@ a:hover, a:visited, a:link, a:active
 	border-spacing: 0;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.toptext{
-	font-size: 4.5vh;
-	font-weight: bold;
+	margin-top: 7vh;
 }
 
 .panel{
 	width: min(30vh, 40vw);
 	height: min(30vh, 40vw);
 	border-radius: 5%;
-	background-color: #A5C882;
+	background-color: var(--secondary-color);
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	
-	font-size: min(2.25vh, 3vw);
+	font-size: min(4.5vh, 6vw);
 	text-align: center;
+	font-weight: bold;
 }
 
 .hoverscale {
@@ -58,14 +84,4 @@ a:hover, a:visited, a:link, a:active
 
 .hoverscale:hover{
 	transform:scale(0.95);
-}
-
-.split {
-	height: 15%;
-	width: 50%;
-	position: fixed;
-	padding-top: 1%;
-	z-index: 1;
-	top: 0;
-	overflow-x: hidden;
 }
