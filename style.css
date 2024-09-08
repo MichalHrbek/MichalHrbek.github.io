@@ -45,7 +45,7 @@ a:hover, a:visited, a:link, a:active
 	font-size: min(4.5vh, 6vw);
 }
 .panel{
-    width: min(30vh, 40vh);
+    width: min(30vh, 40vw);
     height: min(30vh, 40vw);
     border-radius: 5%;
     text-align: center;
