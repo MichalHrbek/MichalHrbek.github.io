@@ -1,34 +1,117 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	</head>
-	<body>
-		<header>
-			<table style="width: 100%;">
-				<tr style="width: 50%;">
-					<td class="t1">Git</td>
-					<td class="t2">Hub</td>
-				</tr>
-				<tr style="width: 50%;">
-					<td class="t1">Michal</td>
-					<td class="t2">Hrbek</td>
-				</tr>
-			</table>
-		</header>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Michal Hrbek</title>
+	<style>
+	:root {
+		--hex-size: min(calc(100vh/9), calc(100vw/7.5));
+		--hex-gap: calc(var(--hex-size)/8);
+		--hex-hover-scale: 95%;
+		--font-size: calc(var(--hex-size)/4);
+	}
 
-		<table class="content">
-			<tbody>
-				<tr>
-					<td><a class="panel hoverscale" href="https://github.com/MichalHrbek/chip8esp">Chip8ESP</a></td>
-					<td><a class="panel hoverscale" href="https://michalhrbek.github.io/pidmap/">PID map</a></td>
-				</tr>
-				<tr>
-					<td><a class="panel hoverscale" href="https://github.com/MichalHrbek/PriceScraper">PriceScraper</a></td>
-					<td><a class="panel hoverscale" href="https://kaasos.itch.io/walls-n-balls">Walls n Balls</a></td>
-				</tr>
-			</tbody>
-		</table>
-	</body>
+	body, html {
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+    }
+
+	body {
+		font-family: sans-serif;
+		background: #222;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+	}
+
+	.hex-row {
+		display: flex;
+		margin-top: calc(var(--hex-size) * 2 * -0.25); /* Overlap rows by 25% of height */
+	}
+
+	.hex-row:nth-child(even) {
+		margin-left: calc(var(--hex-size)*sqrt(3)/2 + var(--hex-gap)*sqrt(3)/4);
+	}
+
+	.hex {
+		transition: transform .2s, opacity 0.2s;
+
+		width: calc(var(--hex-size)*sqrt(3));
+		height: calc(var(--hex-size)*2);
+		background: #4bc6e9;
+		margin-top: var(--hex-gap);
+		margin-right: calc(var(--hex-gap)*sqrt(3)/2);
+		clip-path: polygon(
+			50% 0%, 100% 25%, 100% 75%, 
+			50% 100%, 0% 75%, 0% 25%
+		);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		font-weight: bold;
+		font-size: var(--font-size);
+	}
+
+	.hex:hover {
+		transform: scale(var(--hex-hover-scale));
+	}
+
+	.category {
+		font-weight: bolder;
+		background-image: radial-gradient(#007ea1,  #4bc6e9);
+	}
+
+	.hex-row:hover > *:not(:first-child) {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.hex-row > *:not(:first-child) {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.hex-grid {
+		padding-top: calc(var(--hex-size)*0.5);
+	}
+	</style>
+</head>
+<body>
+	<div class="hex-grid">
+		<div class="hex-row">
+			<div class="hex category">Games</div>
+			<a class="hex" href="https://github.com/MichalHrbek/brickpop">Brick Pop!</a>
+			<a class="hex" href="https://github.com/MichalHrbek/wallsnballs">Walls n Balls</a>
+		</div>
+		<div class="hex-row">
+			<div class="hex category">Cybersec</div>
+			<a class="hex" href="https://github.com/MichalHrbek/krysa">krysa</a>
+		</div>
+		<div class="hex-row">
+			<div class="hex category">Web</div>
+			<a class="hex" href="https://michalhrbek.github.io/pidmap">PIDmap</a>
+			<a class="hex" href="https://github.com/MichalHrbek/PriceScraper">Price scraper</a>
+		</div>
+		<div class="hex-row">
+			<div class="hex category">MCUs</div>
+			<a class="hex" href="https://github.com/MichalHrbek/calc">Smart calc</a>
+			<a class="hex" href="https://github.com/MichalHrbek/chip8esp">CHIP-8 ESP</a>
+		</div>
+		<div class="hex-row">
+			<div class="hex category">Contact</div>
+			<a class="hex" href="https://github.com/MichalHrbek">GitHub</a>
+			<a class="hex" href="https://kasos.cz">Website</a>
+		</div>
+		
+	</div>
+
+</body>
 </html>
