@@ -29,6 +29,7 @@
 
 	.hex-row {
 		display: flex;
+		position: relative;
 		margin-top: calc(var(--hex-size) * 2 * -0.25); /* Overlap rows by 25% of height */
 	}
 
@@ -65,12 +66,12 @@
 		background-image: radial-gradient(#007ea1,  #4bc6e9);
 	}
 
-	.hex-row:hover > *:not(:first-child) {
+	.hex-row:hover > .category-item {
 		opacity: 1;
 		visibility: visible;
 	}
 
-	.hex-row > *:not(:first-child) {
+	.hex-row > .category-item {
 		opacity: 0;
 		visibility: hidden;
 	}
@@ -88,27 +89,27 @@
 	<div class="hex-grid">
 		<div class="hex-row">
 			<div class="hex category">Games</div>
-			<a class="hex" href="https://github.com/MichalHrbek/brickpop">Brick Pop!</a>
-			<a class="hex" href="https://github.com/MichalHrbek/wallsnballs">Walls n Balls</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek/brickpop">Brick Pop!</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek/wallsnballs">Walls n Balls</a>
 		</div>
 		<div class="hex-row">
 			<div class="hex category">Cybersec</div>
-			<a class="hex" href="https://github.com/MichalHrbek/krysa">krysa</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek/krysa">krysa</a>
 		</div>
 		<div class="hex-row">
 			<div class="hex category">Web</div>
-			<a class="hex" href="https://michalhrbek.github.io/pidmap">PIDmap</a>
-			<a class="hex" href="https://github.com/MichalHrbek/PriceScraper">Price scraper</a>
+			<a class="hex category-item" href="https://michalhrbek.github.io/pidmap">PIDmap</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek/PriceScraper">Price scraper</a>
 		</div>
 		<div class="hex-row">
 			<div class="hex category">MCUs</div>
-			<a class="hex" href="https://github.com/MichalHrbek/calc">Smart calc</a>
-			<a class="hex" href="https://github.com/MichalHrbek/chip8esp">CHIP-8 ESP</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek/calc">Smart calc</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek/chip8esp">CHIP-8 ESP</a>
 		</div>
 		<div class="hex-row">
 			<div class="hex category">Contact</div>
-			<a class="hex" href="https://github.com/MichalHrbek">GitHub</a>
-			<a class="hex" href="https://kasos.cz">Website</a>
+			<a class="hex category-item" href="https://github.com/MichalHrbek">GitHub</a>
+			<a class="hex category-item" href="https://kasos.cz">Website</a>
 		</div>
 		
 	</div>
