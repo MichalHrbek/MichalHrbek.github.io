@@ -3,86 +3,86 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Michal Hrbek</title>
+	<link rel="icon" href="data:,">
 	<style>
-	:root {
-		--hex-size: min(calc(100vh/9), calc(100vw/7.5));
-		--hex-gap: calc(var(--hex-size)/8);
-		--hex-hover-scale: 95%;
-		--font-size: calc(var(--hex-size)/4);
-	}
+		:root {
+			--hex-size: min(calc(100vh/9), calc(100vw/7.5));
+			--hex-gap: calc(var(--hex-size)/8);
+			--hex-hover-scale: 95%;
+			--font-size: calc(var(--hex-size)/4);
+		}
 
-	body, html {
-      margin: 0;
-      padding: 0;
-      overflow: auto;
-    }
+		body, html {
+			margin: 0;
+			padding: 0;
+			overflow: auto;
+		}
 
-	body {
-		font-family: sans-serif;
-		background: #222;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		width: 100vw;
-	}
+		body {
+			font-family: sans-serif;
+			background: #222;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			width: 100vw;
+		}
 
-	.hex-row {
-		display: flex;
-		position: relative;
-		margin-top: calc(var(--hex-size) * 2 * -0.25); /* Overlap rows by 25% of height */
-	}
+		.hex-row {
+			display: flex;
+			margin-top: calc(var(--hex-size) * 2 * -0.25); /* Overlap rows by 25% of height */
+		}
 
-	.hex-row:nth-child(even) {
-		margin-left: calc(var(--hex-size)*sqrt(3)/2 + var(--hex-gap)*sqrt(3)/4);
-	}
+		.hex-row:nth-child(even) {
+			margin-left: calc(var(--hex-size)*sqrt(3)/2 + var(--hex-gap)*sqrt(3)/4);
+		}
 
-	.hex {
-		transition: transform .2s, opacity 0.2s;
+		.hex {
+			transition: transform .2s, opacity 0.2s;
 
-		width: calc(var(--hex-size)*sqrt(3));
-		height: calc(var(--hex-size)*2);
-		background: #4bc6e9;
-		margin-top: var(--hex-gap);
-		margin-right: calc(var(--hex-gap)*sqrt(3)/2);
-		clip-path: polygon(
-			50% 0%, 100% 25%, 100% 75%, 
-			50% 100%, 0% 75%, 0% 25%
-		);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
-		font-weight: bold;
-		font-size: var(--font-size);
-	}
+			width: calc(var(--hex-size)*sqrt(3));
+			height: calc(var(--hex-size)*2);
+			background: #4bc6e9;
+			margin-top: var(--hex-gap);
+			margin-right: calc(var(--hex-gap)*sqrt(3)/2);
+			clip-path: polygon(
+				50% 0%, 100% 25%, 100% 75%, 
+				50% 100%, 0% 75%, 0% 25%
+			);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-weight: bold;
+			font-size: var(--font-size);
+		}
 
-	.hex:hover {
-		transform: scale(var(--hex-hover-scale));
-	}
+		.hex:hover {
+			transform: scale(var(--hex-hover-scale));
+		}
 
-	.category {
-		font-weight: bolder;
-		background-image: radial-gradient(#007ea1,  #4bc6e9);
-	}
+		.category {
+			font-weight: bolder;
+			background-image: radial-gradient(#007ea1,  #4bc6e9);
+		}
 
-	.hex-row:hover > .category-item {
-		opacity: 1;
-		visibility: visible;
-	}
+		.hex-row:hover > .category-item {
+			opacity: 1;
+			visibility: visible;
+		}
 
-	.hex-row > .category-item {
-		opacity: 0;
-		visibility: hidden;
-	}
+		.hex-row > .category-item {
+			opacity: 0;
+			visibility: hidden;
+		}
 
-	a {
-		text-decoration: none;
-	}
+		a {
+			text-decoration: none;
+		}
 
-	.hex-grid {
-		padding-top: calc(var(--hex-size)*0.5);
-	}
+		.hex-grid {
+			padding-top: calc(var(--hex-size)*0.5);
+		}
 	</style>
 </head>
 <body>
@@ -111,8 +111,6 @@
 			<a class="hex category-item" href="https://github.com/MichalHrbek">GitHub</a>
 			<a class="hex category-item" href="https://kasos.cz">Website</a>
 		</div>
-		
 	</div>
-
 </body>
 </html>
