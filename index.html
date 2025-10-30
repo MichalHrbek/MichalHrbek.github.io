@@ -15,7 +15,8 @@
 		body, html {
 			margin: 0;
 			padding: 0;
-			overflow: auto;
+			overflow: hidden;
+			scroll-behavior: smooth;
 		}
 
 		body {
@@ -82,6 +83,40 @@
 
 		.hex-grid {
 			padding-top: calc(var(--hex-size)*0.5);
+			z-index: 1;
+		}
+
+		.show-more {
+			color: white;
+			font-size: var(--font-size);
+			position: absolute;
+			right: 0;
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+
+		.show-less {
+			font-size: var(--font-size);
+			color: white;
+			position: absolute;
+			left: 0;
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+
+		.text-icon {
+			height: var(--font-size);
+			vertical-align: -50%;
+		}
+
+		.page2 {
+			position: absolute;
+			left: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			width: 100vw;
 		}
 	</style>
 </head>
@@ -113,6 +148,14 @@
 			<a class="hex category-item" href="https://github.com/MichalHrbek">GitHub</a>
 			<a class="hex category-item" href="https://kasos.cz">Website</a>
 		</div>
+	</div>
+	<a class="show-more" href="#page2">
+		<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="m13.292 12l-4.6-4.6l.708-.708L14.708 12L9.4 17.308l-.708-.708z"/></svg>
+	</a>
+	<div class="page2" id="page2">
+		<a class="show-less" href="#">
+			<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M14 17.308L8.692 12L14 6.692l.708.708l-4.6 4.6l4.6 4.6z"/></svg>
+		</a>
 	</div>
 </body>
 </html>
