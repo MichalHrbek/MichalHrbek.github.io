@@ -31,6 +31,7 @@
 		.hex-row {
 			display: flex;
 			margin-top: calc(var(--hex-size) * 2 * -0.25); /* Overlap rows by 25% of height */
+			gap: calc(var(--hex-gap)*sqrt(3)/2);
 		}
 
 		.hex-row:nth-child(even) {
@@ -44,7 +45,6 @@
 			height: calc(var(--hex-size)*2);
 			background: #4bc6e9;
 			margin-top: var(--hex-gap);
-			margin-right: calc(var(--hex-gap)*sqrt(3)/2);
 			clip-path: polygon(
 				50% 0%, 100% 25%, 100% 75%, 
 				50% 100%, 0% 75%, 0% 25%
