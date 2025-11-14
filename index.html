@@ -58,7 +58,7 @@
 		}
 
 		.hex:hover {
-			transform: scale(var(--hex-hover-scale));
+			transform: scale(var(--hex-hover-scale)) !important;
 		}
 
 		.category {
@@ -67,13 +67,13 @@
 		}
 
 		.hex-row:hover > .category-item {
+			transform: scale(1);
 			opacity: 1;
-			visibility: visible;
 		}
 
 		.hex-row > .category-item {
+			transform: scale(0.0001);
 			opacity: 0;
-			visibility: hidden;
 		}
 
 		a {
